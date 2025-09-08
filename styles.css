@@ -27,3 +27,141 @@ body {
   color: var(--text); /* Colore del testo */
   line-height: 1.4; /* Interlinea leggibile */
 }
+
+.container {
+  max-width: 1100px; /* Limita la larghezza massima del contenitore */
+  margin: 0 auto; /* Centra il contenitore orizzontalmente */
+  padding: 18px; /* Padding interno per distanziare i contenuti dai bordi */
+}
+
+/* Header */
+header {
+  position: sticky; /* L’header rimane visibile durante lo scroll GIT*/
+  top: 0; /* In cima alla pagina */
+  z-index: 50; /* Sovrapposto ad altri elementi */
+  background: white; /* Sfondo bianco GIT*/
+  box-shadow: 0 2px 6px rgba(16, 24, 40, 0.04); /* Leggero ombreggiamento GIT*/
+}
+.header-inner {
+  display: flex; /* Layout flessibile */
+  align-items: center; /* Allinea verticalmente al centro */
+  justify-content: space-between; /* Spazio tra logo e menu */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+}
+.brand {
+  font-weight: 700; /* Grassetto per il logo */
+  text-decoration: none; /* Rimuove sottolineatura */
+  color: var(--text); /* Colore testo */
+}
+#menuBtn {
+  display: none; /* Nasconde il bottone menu su desktop */
+  border: 0; /* Nessun bordo */
+  background: transparent; /* Sfondo trasparente */
+  font-size: 20px; /* Dimensione icona */
+}
+
+nav ul {
+  display: flex; /* Layout orizzontale per gli elementi del menu */
+  gap: 18px; /* Spazio tra i link */
+  align-items: center; /* Allineamento verticale */
+  margin: 0; /* Rimuove margine predefinito */
+  padding: 0; /* Rimuove padding predefinito */
+  list-style: none; /* Rimuove i bullet point */
+}
+nav a {
+  text-decoration: none; /* Rimuove sottolineatura */
+  color: var(--text); /* Colore testo */
+}
+
+/* Hero */
+.hero {
+  padding: 56px 0; /* Spazio verticale sopra e sotto */
+  text-align: center; /* Centra testo e bottoni */
+}
+.hero .subtitle {
+  margin-top: 8px; /* Spazio sopra la sottotitolo */
+  margin-bottom: 20px; /* Spazio sotto la sottotitolo */
+  color: color-mix(in srgb, var(--text) 70%, transparent);
+  /* Colore del testo leggermente più chiaro del colore principale */
+}
+
+/* Form */
+form {
+  display: grid; /* Layout a griglia */
+  gap: 12px; /* Spazio tra righe del form */
+}
+.form-row {
+  display: grid; /* Ogni riga è una griglia */
+  grid-template-columns: 1fr; /* Una sola colonna */
+  gap: 6px; /* Spazio tra label e input */
+}
+input,
+textarea {
+  padding: 8px; /* Spazio interno */
+  border: 1px solid #d1d5db; /* Bordo grigio chiaro */
+  border-radius: 8px; /* Angoli arrotondati */
+  font: inherit; /* Inherit font dal body */
+}
+input:focus,
+textarea:focus {
+  outline: 3px solid color-mix(in srgb, var(--primary) 20%, white);
+  /* Evidenzia campo attivo con colore primario chiaro */
+}
+.form-actions {
+  margin-top: 6px; /* Spazio sopra il pulsante */
+}
+
+/* Buttons */
+.btn {
+  background: var(--primary); /* Colore di sfondo primario */
+  color: #fff; /* Testo bianco */
+  border: 0; /* Nessun bordo */
+  border-radius: 10px; /* Angoli arrotondati */
+  padding: 10px 14px; /* Padding interno */
+  text-decoration: none; /* Rimuove sottolineatura per link */
+  display: inline-block; /* Blocca dimensioni e permette padding */
+}
+
+/* Footer */
+footer {
+  padding: 18px 0; /* Spazio verticale */
+  text-align: center; /* Centra contenuto */
+  color: color-mix(in srgb, var(--text) 60%, white);
+  /* Colore leggermente più chiaro del testo principale */
+}
+
+/* Responsive: mobile menu */
+@media (max-width: 700px) {
+  #menuBtn {
+    display: block; /* Mostra il bottone menu su mobile */
+  }
+  nav {
+    position: absolute; /* Menu assoluto rispetto all’header */
+    left: 0;
+    right: 0;
+    top: 64px; /* Appare subito sotto l’header */
+    background: white; /* Sfondo bianco */
+    padding: 12px; /* Padding interno */
+    border-top: 1px solid #eef2f7; /* Bordo superiore leggero */
+    display: none; /* Nasconde menu di default */
+  }
+  nav.open {
+    display: block; /* Mostra il menu quando ha la classe "open" */
+  }
+  nav ul {
+    flex-direction: column; /* Layout verticale dei link */
+    gap: 10px; /* Spazio tra link */
+  }
+}
