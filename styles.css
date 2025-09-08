@@ -165,3 +165,29 @@ footer {
     gap: 10px; /* Spazio tra link */
   }
 }
+
+/* Projects grid */
+.cards {
+  display: grid; /* Layout a griglia */
+  gap: 14px; /* Spaziatura tra card */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* Colonne responsive: minimo 240px, si adattano alla larghezza */
+  padding: 0; /* Rimuove padding di default */
+}
+.card {
+  border: 1px solid #e5e7eb; /* Bordo chiaro */
+  border-radius: var(--radius); /* Angoli arrotondati */
+  padding: 12px; /* Padding interno */
+  background: white; /* Sfondo bianco */
+}
+.card h3 {
+  margin-top: 0; /* Rimuove margine superiore */
+}
+.tag {
+  display: inline-block; /* Elemento inline ma con proprietà di blocco */
+  font-size: 12px; /* Piccolo testo */
+  padding: 4px 8px; /* Padding interno per il tag */
+  border-radius: 8px; /* Angoli arrotondati */
+  background: #f1f5f9; /* Sfondo chiaro per i tag */
+  margin-right: 6px; /* Spazio tra tag */
+}
