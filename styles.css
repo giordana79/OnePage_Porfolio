@@ -2,7 +2,8 @@
 :root {
   --bg: #f9fafb; /* Colore di sfondo principale della pagina */
   --text: 11827; /* Colore principale del testo */
-  --primary: #0ea5e9; /* Colore primario finale, risultato della risoluzione del conflitto GIT*/
+  /*--primary: #0ea5e9; /* Colore primario finale, risultato della risoluzione del conflitto GIT*/
+  --primary: #06b6d4;
   --radius: 10px; /* Border-radius standard per elementi arrotondati */
 }
 
