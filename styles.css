@@ -1,0 +1,29 @@
+/* styles.css — variabili e stile base */
+:root {
+  --bg: #f9fafb; /* Colore di sfondo principale della pagina */
+  --text: 11827; /* Colore principale del testo */
+  --primary: #0ea5e9; /* Colore primario finale, risultato della risoluzione del conflitto GIT*/
+  --radius: 10px; /* Border-radius standard per elementi arrotondati */
+}
+
+/* Reset base e font di sistema */
+* {
+  box-sizing: border-box; /* Include padding e border nelle dimensioni totali degli elementi */
+}
+html,
+body {
+  height: 100%; /* Assicura che body e html occupino tutta l’altezza della finestra */
+}
+body {
+  margin: 0; /* Rimuove margine di default */
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial; /* Font di sistema come fallback, buona performance e leggibilità */
+  background: var(--bg); /* Sfondo della pagina */
+  color: var(--text); /* Colore del testo */
+  line-height: 1.4; /* Interlinea leggibile */
+}
