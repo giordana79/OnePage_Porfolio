@@ -1,8 +1,8 @@
 /* styles.css — variabili e stile base */
 :root {
-  --bg: #f9fafb; /* Colore di sfondo principale della pagina */
-  --text: 11827; /* Colore principale del testo */
-  --primary: #0ea5e9; /* Colore primario finale, risultato della risoluzione del conflitto GIT*/
+  --bg: #f8fafc; /* Colore di sfondo principale della pagina */
+  --text: #111827; /* Colore principale del testo */
+  --primary: #dc2626; /* Colore primario finale, risultato della risoluzione del conflitto GIT*/
   --radius: 10px; /* Border-radius standard per elementi arrotondati */
 }
 
@@ -140,6 +140,19 @@ footer {
   text-align: center; /* Centra contenuto */
   color: color-mix(in srgb, var(--text) 60%, white);
   /* Colore leggermente più chiaro del testo principale */
+}
+
+/* Aggiunta stile per messaggi d’errore */
+.error-message {
+  color: var(--error);
+  font-size: 0.85rem;
+  min-height: 1em;
+}
+
+input.error,
+textarea.error {
+  border-color: var(--error);
+  outline: 2px solid color-mix(in srgb, var(--error) 40%, white);
 }
 
 /* Responsive: mobile menu */
